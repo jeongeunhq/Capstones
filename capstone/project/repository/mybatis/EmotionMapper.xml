@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="capstone.project.repository.mybatis.EmotionMapper">
+
+    <insert id="save">
+        insert into emotion (diary_id, member_id, emotion_type, emotion_time, created_at, created_by, updated_at, updated_by)
+        values (#{diaryId}, #{memberId}, #{emotionType}, TO_CHAR(CURRENT_TIMESTAMP, 'HH24'), CURRENT_TIMESTAMP, '감정 생성', CURRENT_TIMESTAMP, '감정 생성')
+    </insert>
+
+    <select id="findNewEmotion" resultType="Emotion">
+        select emotion_id, diary_id, member_id, emotion_type, emotion_time
+        from emotion
+        where emotion_id = (select max(emotion_id) from emotion)
+    </select>
+
+    <update id="update">
+        update emotion
+        set emotion_type=#{updateParam.emotionType},
+        emotion_time=TO_CHAR(CURRENT_TIMESTAMP, 'HH24'),
+        updated_at=CURRENT_TIMESTAMP,
+        updated_by='감정 수정'
+        where diary_id = #{diaryId}
+    </update>
+
+<!--    <delete id="delete">-->
+<!--        delete from diary-->
+<!--        where diary_id = #{diaryId}-->
+<!--    </delete>-->
+
+    <update id="delete">
+        update emotion
+        set is_public = 'N'
+        where diary_id = #{diaryId}
+    </update>
+
+    <select id="findByDiaryId" resultType="Emotion">
+        select emotion_id, diary_id, member_id, emotion_type, emotion_time
+        from emotion
+        where diary_id = #{diaryId} and is_public = 'Y'
+    </select>
+
+    <select id="getMonthlyEmotionStatistics" resultType="java.util.LinkedHashMap" parameterType="java.util.Map">
+        select TO_CHAR(TO_DATE(d.write_date, 'YYYYMMDD'), 'YYYYMM') AS month,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '기쁨' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 기쁨,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '희망' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 희망,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '중립' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 중립,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '슬픔' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 슬픔,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '분노' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 분노,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '불안' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 불안,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '피곤' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 피곤,
+               TRUNC(AVG(CASE WHEN e.emotion_type = '후회' THEN 1 ELSE 0 END) * 100, 0) || '%' AS 후회
+        from diary d
+        LEFT JOIN emotion e ON d.diary_id = e.diary_id
+        where d.member_id = #{memberId} and d.is_public = 'Y'
+        and TO_CHAR(TO_DATE(d.write_date, 'YYYYMMDD'), 'YYYYMM') = #{month}
+        group by TO_CHAR(TO_DATE(d.write_date, 'YYYYMMDD'), 'YYYYMM')
+    </select>
+
+    <select id="getTopEmotionsByMonth" resultType="java.util.LinkedHashMap" parameterType="java.util.Map">
+        select e.emotion_type, COUNT(e.emotion_type) AS count
+        from diary d
+        LEFT JOIN emotion e ON d.diary_id = e.diary_id
+        where d.member_id = #{memberId} and d.is_public = 'Y'
+        and TO_CHAR(TO_DATE(d.write_date, 'YYYYMMDD'), 'YYYYMM') = #{month}
+        group by e.emotion_type
+        order by count DESC
+        FETCH FIRST 3 ROWS ONLY
+    </select>
+
+    <select id="getHourlyEmotionByMonth" resultType="java.util.LinkedHashMap" parameterType="java.util.Map">
+        select EMOTION_TYPE, EMOTION_TIME, COUNT
+        from (
+              select e.emotion_type AS EMOTION_TYPE, e.emotion_time AS EMOTION_TIME, COUNT(e.emotion_time) AS COUNT,
+                     ROW_NUMBER() OVER(PARTITION BY e.emotion_time ORDER BY COUNT(e.emotion_time) DESC) AS RN
+              from diary d
+              LEFT JOIN emotion e ON d.diary_id = e.diary_id
+              where d.member_id = #{memberId} AND d.is_public = 'Y'
+              AND TO_CHAR(TO_DATE(d.write_date, 'YYYYMMDD'), 'YYYYMM') = #{month}
+              group by e.emotion_type, e.emotion_time
+        ) sub
+        where RN = 1
+        order by EMOTION_TIME ASC
+    </select>
+
+</mapper>
