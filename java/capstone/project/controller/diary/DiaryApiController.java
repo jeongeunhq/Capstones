@@ -83,8 +83,8 @@ public class DiaryApiController {
 
     @PutMapping("/{diaryId}/delete")
     public ResponseEntity<String> deleteDiary(@PathVariable("diaryId") Integer diaryId) {
-        diaryService.delete(diaryId);
         emotionService.delete(diaryId);
+        diaryService.delete(diaryId);
         return ResponseEntity.ok("일기가 삭제되었습니다");
     }
 
