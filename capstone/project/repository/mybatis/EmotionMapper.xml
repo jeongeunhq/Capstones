@@ -23,16 +23,16 @@
         where diary_id = #{diaryId}
     </update>
 
-<!--    <delete id="delete">-->
-<!--        delete from diary-->
-<!--        where diary_id = #{diaryId}-->
-<!--    </delete>-->
-
-    <update id="delete">
-        update emotion
-        set is_public = 'N'
+    <delete id="delete">
+        delete from emotion
         where diary_id = #{diaryId}
-    </update>
+    </delete>
+
+<!--    <update id="delete">-->
+<!--        update emotion-->
+<!--        set is_public = 'N'-->
+<!--        where diary_id = #{diaryId}-->
+<!--    </update>-->
 
     <select id="findByDiaryId" resultType="Emotion">
         select emotion_id, diary_id, member_id, emotion_type, emotion_time
