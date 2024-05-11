@@ -1,6 +1,7 @@
 package capstone.project.repository.mybatis;
 
 import capstone.project.domain.Diary;
+import capstone.project.domain.Emotion;
 import capstone.project.repository.diary.DiaryUpdateApiDto;
 import capstone.project.repository.diary.DiaryUpdateDto;
 import org.apache.ibatis.annotations.Mapper;
@@ -11,6 +12,8 @@ import java.util.Optional;
 
 @Mapper
 public interface DiaryMapper {
+
+    void preSave(Diary diary);
 
     void save(Diary diary);
 
