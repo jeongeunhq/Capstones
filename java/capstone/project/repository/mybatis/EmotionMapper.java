@@ -16,6 +16,8 @@ import java.util.Optional;
 @Mapper
 public interface EmotionMapper {
 
+    void preSave(Emotion emotion);
+
     void save(Emotion emotion);
 
     Emotion findNewEmotion();
