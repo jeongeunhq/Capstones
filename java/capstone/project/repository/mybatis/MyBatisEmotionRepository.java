@@ -23,6 +23,7 @@ public class MyBatisEmotionRepository implements EmotionRepository {
 
     @Override
     public Emotion save(Emotion emotion) {
+        emotionMapper.preSave(emotion);
         emotionMapper.save(emotion);
         return emotionMapper.findNewEmotion();
     }
