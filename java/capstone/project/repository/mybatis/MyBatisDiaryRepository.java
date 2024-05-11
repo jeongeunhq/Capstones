@@ -22,6 +22,7 @@ public class MyBatisDiaryRepository implements DiaryRepository {
 
     @Override
     public Diary save(Diary diary) {
+        diaryMapper.preSave(diary);
         diaryMapper.save(diary);
         return diaryMapper.findNewDiary();
     }
