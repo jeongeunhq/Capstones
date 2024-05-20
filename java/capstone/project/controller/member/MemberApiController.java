@@ -74,7 +74,7 @@ public class MemberApiController {
             return ResponseEntity.ok("멤버가 성공적으로 저장되었습니다.");
         } catch (IllegalArgumentException e) {
             // 중복된 아이디가 이미 존재하는 경우 클라이언트에게 알림
-            return ResponseEntity.badRequest().body("이미 존재하는 아이디입니다.");
+            return ResponseEntity.badRequest().body("이미 사용 중인 아이디입니다.");
         }
     }
 
@@ -130,7 +130,7 @@ public class MemberApiController {
         }
 
         if (memberService.isMemberIdExists(memberId)) {
-            return ResponseEntity.ok("이미 사용중인 아이디입니다.");
+            return ResponseEntity.ok("이미 사용 중인 아이디입니다.");
         } else {
             return ResponseEntity.ok("사용 가능한 아이디입니다.");
         }
