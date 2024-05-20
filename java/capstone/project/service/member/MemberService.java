@@ -51,5 +51,10 @@ public class MemberService {
     public void update(Integer id, MemberUpdateApiDto updateParam) {
         memberRepository.update(id, updateParam);
     }
+
+    // 아이디 중복 확인 메서드 추가
+    public boolean isMemberIdExists(String memberId) {
+        return memberRepository.findByMemberId(memberId).isPresent();
+    }
 }
 
