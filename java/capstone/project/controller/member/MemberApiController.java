@@ -15,6 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 @RestController
 @RequiredArgsConstructor
@@ -116,5 +117,22 @@ public class MemberApiController {
 
         memberService.update(id, updateParam);
         return new ResponseEntity<>("정보가 성공적으로 수정되었습니다.", HttpStatus.OK);
+    }
+
+    @GetMapping("/checkId")
+    public ResponseEntity<String> checkMemberId(@RequestParam("memberId") String memberId) {
+        // 이메일 형식 검증
+        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+        Pattern emailPattern = Pattern.compile(emailRegex);
+
+        if (!emailPattern.matcher(memberId).matches()) {
+            return ResponseEntity.ok("올바른 이메일 형식이 아닙니다.");
+        }
+
+        if (memberService.isMemberIdExists(memberId)) {
+            return ResponseEntity.ok("이미 사용중인 아이디입니다.");
+        } else {
+            return ResponseEntity.ok("사용 가능한 아이디입니다.");
+        }
     }
 }
