@@ -66,7 +66,8 @@ public class ChatTApiController {
         // HTTP 요청 본문과 헤더를 포함한 요청 엔티티 생성
         HttpEntity<String> requestEntity = new HttpEntity<>(flutterMessage, headers);
 
-        String flaskEndpoint = "http://localhost:5000/chatbot/bert/" + chatId; //챗봇(chatId로 방 구분)
+//        String flaskEndpoint = "http://localhost:5000/chatbot/bert/" + chatId; //챗봇(chatId로 방 구분)
+        String flaskEndpoint = "http://3.35.183.52:8081/chatbot/bert/" + chatId;
 
         // RestTemplate을 사용하여 Flask 서버에 데이터 요청
         RestTemplate restTemplate = new RestTemplate();
