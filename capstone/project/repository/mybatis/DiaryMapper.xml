@@ -35,11 +35,6 @@
         where diary_id = #{diaryId}
     </update>
 
-<!--    <delete id="delete">-->
-<!--        delete from diary-->
-<!--        where diary_id = #{diaryId}-->
-<!--    </delete>-->
-
     <update id="delete">
         update diary
         set is_public = 'N'
