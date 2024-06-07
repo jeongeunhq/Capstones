@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+<!--    <link th:href="@{/css/bootstrap.min.css}"-->
+<!--          href="css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body>
+
+<div class="container" style="max-width: 600px">
+    <div class="py-5 text-center">
+        <h2>회원 목록</h2>
+    </div>
+
+    <button class="btn btn-primary float-end"
+            onclick="location.href='addForm.html'"
+            th:onclick="|location.href='@{/members/add}'|"
+            type="button">회원 가입
+    </button>
+
+    <hr class="my-4">
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>아이디</th>
+                <th>비밀번호</th>
+                <th>닉네임</th>
+                <th>성별</th>
+                <th>생년월일</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}">
+                <td><a href="member.html" th:href="@{/members/{id}(id=${member.id})}" th:text="${member.id}">ID</a>
+                </td>
+                <td><a href="member.html" th:href="@{|/members/${member.id}|}" th:text="${member.memberId}">아이디</a></td>
+                <td th:text="${member.password}">비밀번호</td>
+                <td th:text="${member.nickname}">닉네임</td>
+                <td th:text="${member.gender}">성별</td>
+                <td th:text="${member.birthdate}">생년월일</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div> <!-- /container -->
+
+</body>
+</html>
