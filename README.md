@@ -33,7 +33,7 @@
 
 <br/><br/><br/>
 <b>2. 회원가입</b><br/><br/>
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-59" src="https://github.com/user-attachments/assets/d1840f80-07bf-47a9-ae7d-f42c26253524"><br/>
+<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-59" src="https://github.com/user-attachments/assets/cb566b3c-8961-4b4f-a8a3-169c80de5db9"><br/>
 <li> 회원가입 : 아이디(이메일 형식) 중복 검사 진행<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     이후 비밀번호, 닉네임, 성별, 생일을 수집하여 회원가입을 진행함</li>
