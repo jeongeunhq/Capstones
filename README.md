@@ -22,7 +22,7 @@
 <br/>
 <b>1. 메인 화면 + 로그인</b><br/><br/>
 
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-54" src="[https://github.com/user-attachments/assets/b05c119b-ae70-44d8-b337-84bb9b301d09]"><br/>
+<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-54" src="https://github.com/user-attachments/assets/b05c119b-ae70-44d8-b337-84bb9b301d09"><br/>
 <li> 메인 화면 : 경험치를 쌓아 캐릭터를 키울 수 있는 시스템이 있음<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp기본 행동 추천을 진행하며, 마이페이지로 갈 수 있음</li>
 <li> 마이페이지 : 로그인과 로그아웃, 회원가입을 진행할 수 있는 페이지</li>
