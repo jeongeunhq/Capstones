@@ -23,37 +23,36 @@
 <b>1. 메인 화면 + 로그인</b><br/><br/>
 
 <img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-54" src="https://github.com/user-attachments/assets/b05c119b-ae70-44d8-b337-84bb9b301d09"><br/>
-<li> 메인 화면 : 경험치를 쌓아 캐릭터를 키울 수 있는 시스템이 있음<br/>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp기본 행동 추천을 진행하며, 마이페이지로 갈 수 있음</li>
-<li> 마이페이지 : 로그인과 로그아웃, 회원가입을 진행할 수 있는 페이지</li>
+<li> 메인 화면 : 로그인과 회원가입을 할 수 있음<br/>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
 <li> 로그인 : 이미 가입된 회원으로 아이디 비밀번호를 입력하여 로그인 할 수 있음<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-    &nbsp&nbsp&nbsp 로그인 후 마이페이지에 닉네임 노출됨 </li>
-
-
-<br/><br/><br/>
-<b>2. 회원가입</b><br/><br/>
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-59" src="https://github.com/user-attachments/assets/cb566b3c-8961-4b4f-a8a3-169c80de5db9"><br/>
+    &nbsp&nbsp&nbsp 로그인 후 로그아웃 기능이 있는 페이지가 나옴 </li>
 <li> 회원가입 : 아이디(이메일 형식) 중복 검사 진행<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     이후 비밀번호, 닉네임, 성별, 생일을 수집하여 회원가입을 진행함</li>
+
+<br/><br/><br/>
+<b>2. 채팅, 일기 작성</b><br/><br/>
+<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-59" src="https://github.com/user-attachments/assets/cb566b3c-8961-4b4f-a8a3-169c80de5db9"><br/>
+<li> 채팅 : 상담을 원하는 내용을 입력하면, 이에 대해 알맞은 답변을 해줌</li>
 
 
 <br/><br/><br/>
 <b>3. 채팅 </b><br/><br/>
 <img width="800" alt="KakaoTalk_Photo_2024-08-28-13-53-05" src="https://github.com/user-attachments/assets/7cc7b201-768b-43d4-a684-d9f7723bc41b"> <br/>
 <li> 채팅 : 상담을 원하는 내용을 입력하면, 이에 대해 알맞은 답변을 해줌</li>
-
-
-
-<br/><br/><br/>
-<b>4. 일기 </b><br/><br/>
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-53-22" src="https://github.com/user-attachments/assets/fd3704ae-3caf-4bf9-ad32-efdf97a6cf1d"> <br/>
 <li> 일기 : 달력에서 날짜를 선택하여 일기 작성 전 감정을 먼저 기록<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 이후 자유롭게 일기를 작성하고, 일기 작성 후 감정을 기록하여 작성한 일기를 저장<br/>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 이미 일기를 작성한 날짜일 경우 기록했던 전후 감정을 보여줌<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 연필 버튼을 눌러 일기를 수정, 휴지통 버튼을 눌러 일기 삭제 가능<br/>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 일기 작성 후 감정을 기반으로, 알맞은 배경 음악을 생성하고 플레이함
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 일기 작성한 날짜는 하늘색 점으로 표시<br/>
+
+<br/><br/><br/>
+<b>4. 감정통계 & 우울증 척도 표시 </b><br/><br/>
+<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-53-22" src="https://github.com/user-attachments/assets/fd3704ae-3caf-4bf9-ad32-efdf97a6cf1d"> <br/>
+<li> 감정 통계: 일기 작성 내용 기반으로 하루&월간 단위로 사용자의 기분 통계를 표시</li>
+<li> 우을증 척도 설문조사: PHQ-9 설문지를 통해 사용자의 우울증 수준을 체크</li>
+   
 
 
 
