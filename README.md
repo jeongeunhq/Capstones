@@ -18,11 +18,10 @@
 
 <br/><br/>
 
-## 애플리케이션 사용자 매뉴얼
+## 메인 기능
 <br/>
 <b>1. 메인 화면 + 로그인</b><br/><br/>
-![KakaoTalk_20250113_200322908](https://github.com/user-attachments/assets/91ad5870-1f34-41b9-ba9b-24fe05614296)
-<br/>
+![KakaoTalk_20250113_200322908](https://github.com/user-attachments/assets/91ad5870-1f34-41b9-ba9b-24fe05614296)<br/>
 <li> 메인 화면 : 로그인과 회원가입을 할 수 있음<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
 <li> 로그인 : 이미 가입된 회원으로 아이디 비밀번호를 입력하여 로그인 할 수 있음<br/>
