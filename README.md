@@ -21,8 +21,8 @@
 ## 애플리케이션 사용자 매뉴얼
 <br/>
 <b>1. 메인 화면 + 로그인</b><br/><br/>
-
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-54" src="https://github.com/user-attachments/assets/b05c119b-ae70-44d8-b337-84bb9b301d09"><br/>
+![KakaoTalk_20250113_200322908](https://github.com/user-attachments/assets/f777bd3e-327e-46e6-a1d7-20a404ae614d)
+<br/>
 <li> 메인 화면 : 로그인과 회원가입을 할 수 있음<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
 <li> 로그인 : 이미 가입된 회원으로 아이디 비밀번호를 입력하여 로그인 할 수 있음<br/>
@@ -34,7 +34,7 @@
 
 <br/><br/><br/>
 <b>2. 채팅, 일기 작성</b><br/><br/>
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-52-59" src="https://github.com/user-attachments/assets/cb566b3c-8961-4b4f-a8a3-169c80de5db9"><br/>
+![KakaoTalk_20250113_200322908_01](https://github.com/user-attachments/assets/36ba2566-3177-449b-a7b7-46e49fbc7d1a)<br/>
 <li> 채팅 : 상담을 원하는 내용을 입력하면, 이에 대해 알맞은 답변을 해줌</li>
 <li> 일기 : 달력에서 날짜를 선택하여 일기 작성 전 감정을 먼저 기록<br/>
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 이후 자유롭게 일기를 작성하고, 일기 작성 후 감정을 기록하여 작성한 일기를 저장<br/>
@@ -43,13 +43,14 @@
 
 <br/><br/><br/>
 <b>3. 감정통계 & 우울증 척도 표시 </b><br/><br/>
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-53-05" src="https://github.com/user-attachments/assets/7cc7b201-768b-43d4-a684-d9f7723bc41b"> <br/>
+![KakaoTalk_20250113_200322908_02](https://github.com/user-attachments/assets/91b3f3db-ed86-44d1-a6ea-bbe9cd3be80e)
+<br/>
 <li> 감정 통계: 일기 작성 내용 기반으로 하루&월간 단위로 사용자의 기분 통계를 표시</li>
 <li> 우을증 척도 설문조사: PHQ-9 설문지를 통해 사용자의 우울증 수준을 체크</li>
 
 <br/><br/><br/>
 <b>4. 음악 추천 기능 </b><br/><br/>
-<img width="800" alt="KakaoTalk_Photo_2024-08-28-13-53-22" src="https://github.com/user-attachments/assets/fd3704ae-3caf-4bf9-ad32-efdf97a6cf1d"> <br/>
+![KakaoTalk_20250113_200322908_03](https://github.com/user-attachments/assets/6e12ff1c-0c61-49b4-8b25-135e3ad87f24)<br/>
 <li> 오늘의 날짜 기준으로 사용자가 작성한 일기 기반 또는 새로운 감정 키워드를 선택해 음악을 추천받는 것을 선택할 수 있음</li>
 <li> 사용자가 입력한 감정에 맞게 공감 또는 해당 감정을 극복할 수 있는 두가지 카테고리로 노래 추천 받을 수 있음</li>
    
